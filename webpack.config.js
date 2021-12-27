@@ -10,7 +10,7 @@ const entries = dirs.map((dir) => [
 ]);
 
 module.exports = {
-  mode: "development",
+  mode: process.env.DEVMODE ? "development" : "production",
   entry: Object.fromEntries(entries),
   module: {
     rules: [
@@ -22,11 +22,18 @@ module.exports = {
         test: /.css$/i,
         loader: "css-loader",
       },
+      {
+        test: /.ts$/i,
+        loader: "ts-loader",
+      },
     ],
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
-    clean: true
+    clean: true,
   },
 };
