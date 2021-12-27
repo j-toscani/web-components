@@ -6,7 +6,7 @@ const pathToDirs = path.resolve(__dirname, "src", "components");
 const dirs = fs.readdirSync(pathToDirs);
 const entries = dirs.map((dir) => [
   dir,
-  path.resolve(pathToDirs, dir, "component.js"),
+  path.resolve(pathToDirs, dir, "component.ts"),
 ]);
 
 module.exports = {
