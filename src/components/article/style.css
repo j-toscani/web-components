@@ -1,0 +1,9 @@
+article {
+    border: 1px solid red;
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-decoration: underline;
+}
