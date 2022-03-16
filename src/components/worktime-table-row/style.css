@@ -1,0 +1,11 @@
+ul {
+    padding: 1rem;
+    padding-left: 2rem;
+
+    background: gray;
+    color: white;
+}
+
+::slotted(li) {
+    font-family: 'Courier New', Courier, monospace;
+}
